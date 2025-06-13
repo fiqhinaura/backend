@@ -26,9 +26,10 @@ try {
 
 
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://localhost:3000'],
+  origin: true, // Izinkan semua asal (atau bisa pakai array termasuk domain frontend kamu)
   credentials: true,
 }));
+
 app.use(cookieParser());
 app.use(express.json());
 app.use('/uploads', express.static('uploads')); 
