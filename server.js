@@ -26,15 +26,13 @@ try {
 
 
 app.use(cors({
- origin: ['http://localhost:3000', 'https://backend-production-2169.up.railway.app/']
+  origin: ['http://localhost:8080', 'http://localhost:3000'],
   credentials: true,
 }));
-
 app.use(cookieParser());
 app.use(express.json());
 app.use('/uploads', express.static('uploads')); 
 app.use(router)
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(5000, () => {
+  console.log('Server is running on port 5000');
 });
