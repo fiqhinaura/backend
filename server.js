@@ -26,7 +26,7 @@ try {
 
 
 app.use(cors({
-  origin: true, // Izinkan semua asal (atau bisa pakai array termasuk domain frontend kamu)
+ origin: ['http://localhost:3000', 'https://backend-production-2169.up.railway.app/']
   credentials: true,
 }));
 
